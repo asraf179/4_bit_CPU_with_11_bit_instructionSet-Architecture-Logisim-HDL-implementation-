@@ -11,6 +11,9 @@ The design is intended to demonstrate how a small processor combines a program c
 
 ## Architecture Overview
 
+
+### Top-level 4-bit CPU architecture
+
 ![Top-level 4-bit CPU architecture](docs/cpu_top_level.png)
 
 The top-level design follows a **single-cycle-style datapath**. The current instruction is read from memory using the Program Counter. The control unit decodes the opcode, the register file supplies the operands, and the ALU produces the result. At the active CPU clock edge, the processor updates the Program Counter, destination register, status flags, or memory according to the instruction.
