@@ -1,0 +1,20 @@
+
+main:
+	iverilog -o out4 ALU.v ALU_tb.v ALU_ADD_SUB_Nbit.v ALU_SHL_Nbit.v
+	vvp out4
+	gtkwave test3.vcd &
+
+main2:
+	iverilog -o out4 RF_1bit.v RF_Nbit.v RFSet.v RFSet_tb.v 
+	vvp out4
+	gtkwave test3.vcd &
+
+main3:
+	iverilog -o out4 RAM_1x1.v RAM_1xN.v RAM_MxN.v RAM_MxN_tb.v 
+	vvp out4
+	gtkwave test3.vcd &
+
+main4:
+	iverilog -o out4 CPU.v CPU_tb.v CU.v FLAG_Register.v PC.v ALU.v ALU_ADD_SUB_Nbit.v ALU_ROL_Nbit.v RF_1bit.v RF_Nbit.v RFSet.v RAM_1x1.v RAM_1xN.v RAM_MxN.v
+	vvp out4
+	gtkwave test3.vcd &
